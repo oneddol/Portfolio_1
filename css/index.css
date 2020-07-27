@@ -2,7 +2,16 @@
 @import url(reset.css);
 @import url(common.css);
 
-.row{max-width:100%;}
+.row{max-width:1300px; margin:0 auto;}
 
-#header .main_menu .login_menu{background:#333;}
-#header .main_menu .login_menu > a{color:#e8e8e8; font-size:14px; font-weight:bold; padding:14px 7px;}
+#header{position:fixed; width:100%; top:0; left:0;}
+#header .main_menu{background:#000;}
+#header .main_menu .row {position:relative;}
+#header .main_menu .login_menu > a{display:inline-block; color:#e8e8e8; font-size:14px; font-weight:bold; padding:14px 7px;}
+#header .main_menu .sns_menu{position:absolute; top:50%; right:0; transform:translateY(-50%);}
+#header .main_menu .sns_menu > a{color:#e8e8e8; font-size:28px; letter-spacing:-0.5px;}
+#header .h1_nav{background:rgba(0,0,0,0.19); position:relative;}
+.h1_nav .nav{position:absolute; top:0; right:19.5%; color:rgba(255,255,255,0.78);}
+.h1_nav .nav .depth1 > li{position:relative; display:inline-block; font-weight:bold; width:156px;}
+.h1_nav .nav .depth1 > li > a{display:inline-block; text-align:center; padding:45px 0;}
+.h1_nav .nav .depth2{position:absolute; top:100%; left:0;}
