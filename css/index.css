@@ -3,3 +3,51 @@
 @import url(common.css);
 
 /*공통구역을 제외한 메인페이지 스타일*/
+
+#section{margin-top:40px;}
+.slide_outer{height:1016px; position:relative; overflow:hidden;}
+.slide_inner > div{height:1016px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;}
+.slide_inner > div:before{content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
+.slide_inner > div:nth-child(1){background-image:url(../images/main_metapo01.jpg); z-index:1;}
+.slide_inner > div:nth-child(2){background-image:url(../images/main_metapo02.jpg)}
+.slide_inner > div:nth-child(3){background-image:url(../images/main_metapo03.jpg)}
+.slide_inner > div > .text{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;
+color:white; z-index:9999;}
+.slide_inner > div > .text > h3{font-size:37.8px; padding:0 55px 35px; border-bottom:3px solid #fff;}
+.slide_inner .text > div > p:first-child{font-size:50.4px; padding:25px 0; margin-bottom:15px;}
+.slide_inner .text > div > p:last-child{font-size:18.9px; margin-bottom:120px;}
+
+.banner{background:#1f1f1f; color:#fff; text-align:center; padding:20px 0;}
+.banner > p:nth-child(1){font-size:20px; margin-bottom:15px;}
+.banner > p:nth-child(2){font-size:25.2px; margin-bottom:5px;}
+.banner > p:nth-child(3){font-size:14px;}
+.banner > p strong{font-weight:bold;}
+
+.banner > p:nth-child(2) span{color:#8a6d3b}
+
+.info_box{padding:60px 15px;}
+.info_box .column{width:48%; overflow:hidden; position:relative; float:left; margin:1%;}
+.info_box .column > a{position:relative;}
+.info_box .column:hover .overlay{background:rgba(0,0,0,0.5)}
+.info_box .column > img{background-size:cover; background-position:center; background-repeat:no-repeat;}
+.info_box .column .overlay{position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0); transition:all 0.5s;}
+.info_box .column .copy{text-align:center; width:300px; height:300px; color:white;position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); overflow:hidden;}
+.info_box .column .overlay h3{font-size:31.5px; padding:40px 0 5px;}
+.info_box .column .overlay p{padding-bottom:70px;}
+.info_box .column .overlay span{position:absolute; top:70%; left:50%; transform:translate(-50%);
+    border:2px solid #fff; padding:5px 15px; background:rgba(0,0,0,0.25); width:150px; transition:all 0.5s;}
+.info_box .column .overlay span:hover{background:rgba(255,255,255,0.45);}
+
+.info_box .column:hover .overlay_black{background:rgba(0,0,0,0.5)}
+.info_box .column .overlay_black{position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,1); transition:all 0.5s;}
+.info_box .column .overlay_black h3{font-size:31.5px; padding:40px 0 5px;}
+.info_box .column .overlay_black p{padding-bottom:70px;}
+.info_box .column .overlay_black span{position:absolute; top:70%; left:50%; transform:translate(-50%);
+    border:2px solid #fff; padding:5px 15px; background:rgba(0,0,0,0.25); width:150px; transition:all 0.5s;}
+.info_box .column .overlay_black span:hover{background:rgba(255,255,255,0.45);}
+
+.slide_banner{height:500px; background:url(../images/banner_bg01.jpg); background-size:cover; background-attachment:fixed; background-position:center; color:white; text-align:center;}
+.slide_banner .banner_wrap{height:500px; background:rgba(0,0,0,0.5)}
+.slide_banner .row > div:nth-child(1){padding-top:150px; font-size:50.4px;}
+.slide_banner .row > div:nth-child(2){padding:15px 0; font-size:37.8px;}
+.slide_banner .row > div:nth-child(3){font-size:18.9px;}

@@ -3,7 +3,7 @@
 
 /*헤더, 푸터 등 공통구역에 들어갈 스타일*/
 
-body{background:skyblue}
+body{position:relative}
 .row{max-width:1300px; margin:0 auto;}
 
 #header{position:fixed; width:100%; top:0; left:0;}
@@ -14,8 +14,8 @@ body{background:skyblue}
 #header .main_menu .sns_menu{position:absolute; top:50%; right:0; transform:translateY(-50%);}
 #header .main_menu .sns_menu > a{color:#e8e8e8; font-size:28px; letter-spacing:-0.5px;}
 #header .main_menu .sns_menu > a:hover{color:#fff;}
-#header .h1_nav{background:rgba(0,0,0,0.19); position:relative; top:0; right:0;}
-.h1_nav .nav{position:absolute; top:0; right:19.5%; color:rgba(255,255,255,0.78);width:710px;}
+#header .h1_nav{background:rgba(0,0,0,0.19); position:relative; top:0; right:0; z-index:9999;}
+.h1_nav .nav{position:absolute; top:0; right:19.5%; color:rgba(255,255,255,0.78);width:710px;z-index:9999;}
 .h1_nav .nav .depth1 > li{width:19%; height:90px; line-height:90px; text-align:center; position:relative; display:inline-block; transition:all 0.5s;}
 .h1_nav .nav .depth1 > li > a{display:inline-block; text-align:center; font-weight:bold; }
 .h1_nav .nav .depth1 > li:hover{color:#DE4555;}
@@ -26,7 +26,7 @@ body{background:skyblue}
 .h1_nav .nav .depth2 > li:hover{background:rgba(49,49,49,0.8)}
 .h1_nav .nav .depth2 > li > a{display:block; background:rgba(49,49,49,0.50); color:#fff; text-align:center;}
 
-#footer{position:absolute; bottom:0; width:100%; background:#1f1f1f; color:#d1d1d1; font-size:12px; }
+#footer{position:relative; bottom:0; width:100%; background:#1f1f1f; color:#d1d1d1; font-size:12px; }
 #footer .company_menu{}
 #footer .company_menu > ul > li{float:left; width:20%; text-align:center;}
 #footer .company_menu > ul > li > a{font-size:14px; color:#cbcbcb; display:block; line-height:50px;}
