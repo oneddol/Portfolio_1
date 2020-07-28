@@ -1,27 +1,64 @@
-* { margin:0; padding:0; 
-    box-sizing:border-box; }
-a { color:inherit; 
-    text-decoration:none }    
-ul { list-style:none }    
-table { border-collapse:collapse;
-    width:100%; table-layout:fixed; }
-img { max-width:100%; 
-    vertical-align:middle;
-    border:none }    
-.cf:after, .cf:before { content:''; display:block; clear:both}    
-.blind{ font-size:0; position:absolute; width:0; height:0; overflow:hidden; text-indent:-9999px; line-height:0;}
-.skip a{background:#000; color:#fff; text-align:center; display:block;
-    width:1px; height:1px; overflow:hidden; position:absolute; top:-100px;}
-.skip a:focus{width:100%; height:auto; padding:10px 0; position:fixed;  top:0; z-index:99999;}
-h1, h2, h3, h4, h5, h6 {
-    font-size:100%; 
-    font-weight:normal; } 
-strong, th { font-weight:normal }    
-address, em { font-style:normal }
-fieldset{border:none;}
-legend{display:none;}
-button{border:none; background:none;}
+@charset "utf-8";
+* { margin:0; padding:0;  
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+a { color:inherit; text-decoration:none }
+
+/* 이미지 넓이값은 필요한 곳에서 width:100% 설정할 것 */
+img { vertical-align:middle; 
+    border:none }
 
 
+/*float 때문에 무너진 부모요소 살릴때*/
+.cf:after, .cf:before {
+    content: '';
+    clear: both;
+    display: block;
+}
+ul, ol { list-style: none;}
+table { border-collapse:collapse; 
+    table-layout:fixed; 
+    /* white-space:nowrap을 쓰면 자동줄바꿈이 되지 않고 칸 밖으로 오버플로우가 발생하는데 이때 표 구조가 유지되도록 하기 위해 fixed 시킴*/
+    width:100%; }
+button, input { border:none }    
+button[type=submit], 
+input[type=submit],
+button[type=button], 
+input[type=button] { cursor:pointer }
+fieldset { border:none }
+legend, caption { display:none }
+
+/*HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/*접근성 때문에 필요한 것들이나 화면에서 감춰야 할때*/
+.blind { position:absolute; width:0; height:0;
+    overflow:hidden; text-indent:-9999px;
+    font-size:0px; line-height:0; }
+h1, h2, h3, h4, h5, h6, pre, textarea {
+    font-size: 100%; }    
+address, em { font-style:normal }    
+strong, th { font-weight:normal }
+
+/*박스안에 넘치는 글자를 말줄임표로 줄일때*/
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 본문바로가기 스타일 */
+.skip a { display:block;
+    background:#000; color:#fff;
+    text-align:center; width: 1px;  height: 1px;
+    overflow:hidden; position:absolute; 
+    top:-100px }
+.skip a:focus { width: 100%;  height:auto;
+    padding:10px 0px; position:fixed;
+    top:0px; z-index:9999999; } 
 
 

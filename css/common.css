@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import url(reset.css);
+
+/*헤더, 푸터 등 공통구역에 들어갈 스타일*/
+
+.row{max-width:1300px; margin:0 auto;}
+
+#header{position:fixed; width:100%; top:0; left:0;}
+#header .main_menu{background:#000;}
+#header .main_menu .row {position:relative;}
+#header .main_menu .login_menu > a{display:inline-block; color:#e8e8e8; font-size:14px; font-weight:bold; padding:14px 7px;}
+#header .main_menu .sns_menu{position:absolute; top:50%; right:0; transform:translateY(-50%);}
+#header .main_menu .sns_menu > a{color:#e8e8e8; font-size:28px; letter-spacing:-0.5px;}
+#header .h1_nav{background:rgba(0,0,0,0.19); position:relative; top:0; right:0;}
+.h1_nav .nav{position:absolute; top:0; right:19.5%; color:rgba(255,255,255,0.78);width:710px;}
+.h1_nav .nav .depth1 > li{float:left; width:20%; font-weight:bold; height:90px; line-height:90px; text-align:center; position:relative;}
+.h1_nav .nav .depth1 > li > a{display:block; text-align:center;}
+.h1_nav .nav .depth2{position:absolute; top:100%; left:0; width:100%; display:none;}
+.h1_nav .nav .depth1:hover .depth2{display:block;}
+.h1_nav .nav .depth2 > li{line-height:40px;}
+.h1_nav .nav .depth2 > li > a{display:block; background:rgba(49,49,49,0.50);}
