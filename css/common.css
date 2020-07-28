@@ -3,19 +3,47 @@
 
 /*헤더, 푸터 등 공통구역에 들어갈 스타일*/
 
+body{background:skyblue}
 .row{max-width:1300px; margin:0 auto;}
 
 #header{position:fixed; width:100%; top:0; left:0;}
 #header .main_menu{background:#000;}
 #header .main_menu .row {position:relative;}
 #header .main_menu .login_menu > a{display:inline-block; color:#e8e8e8; font-size:14px; font-weight:bold; padding:14px 7px;}
+#header .main_menu .login_menu > a:hover{color:#fff;}
 #header .main_menu .sns_menu{position:absolute; top:50%; right:0; transform:translateY(-50%);}
 #header .main_menu .sns_menu > a{color:#e8e8e8; font-size:28px; letter-spacing:-0.5px;}
+#header .main_menu .sns_menu > a:hover{color:#fff;}
 #header .h1_nav{background:rgba(0,0,0,0.19); position:relative; top:0; right:0;}
 .h1_nav .nav{position:absolute; top:0; right:19.5%; color:rgba(255,255,255,0.78);width:710px;}
-.h1_nav .nav .depth1 > li{float:left; width:20%; font-weight:bold; height:90px; line-height:90px; text-align:center; position:relative;}
-.h1_nav .nav .depth1 > li > a{display:block; text-align:center;}
-.h1_nav .nav .depth2{position:absolute; top:100%; left:0; width:100%; display:none;}
-.h1_nav .nav .depth1:hover .depth2{display:block;}
+.h1_nav .nav .depth1 > li{width:19%; height:90px; line-height:90px; text-align:center; position:relative; display:inline-block; transition:all 0.5s;}
+.h1_nav .nav .depth1 > li > a{display:inline-block; text-align:center; font-weight:bold; }
+.h1_nav .nav .depth1 > li:hover{color:#DE4555;}
+.h1_nav .nav .depth2{position:absolute; top:100%; left:0; width:100%; display:none; transition:all 0.5s; border-bottom:3px solid #DE4555;}
+.h1_nav .nav .depth1 > li:hover .depth2{display:inline-block;}
+.h1_nav .nav .depth2:before{content:""; position:absolute; bottom:100%; }
 .h1_nav .nav .depth2 > li{line-height:40px;}
-.h1_nav .nav .depth2 > li > a{display:block; background:rgba(49,49,49,0.50);}
+.h1_nav .nav .depth2 > li:hover{background:rgba(49,49,49,0.8)}
+.h1_nav .nav .depth2 > li > a{display:block; background:rgba(49,49,49,0.50); color:#fff; text-align:center;}
+
+#footer{position:absolute; bottom:0; width:100%; background:#1f1f1f; color:#d1d1d1; font-size:12px; }
+#footer .company_menu{}
+#footer .company_menu > ul > li{float:left; width:20%; text-align:center;}
+#footer .company_menu > ul > li > a{font-size:14px; color:#cbcbcb; display:block; line-height:50px;}
+#footer .company_menu > ul > li > a:hover{background:#000; color:#fff;}
+#footer .company_menu > ul > li > ul > li > a{font-size:12px; color:rgba(146,146,146,1.0); display:block; line-height:25px;}
+#footer .company_menu > ul > li > ul > li > a:hover{background:rgba(58,58,58,1); color:rgba(240,92,15,1);}
+#footer .map{height:100px; background:green;}
+.footer .footer_menu > ul > li{float:left;}
+.footer .footer_menu > ul > li > a{font-size:12px; color:#e0e0e0; display:block; line-height:65px; padding-left:15px;}
+.footer .footer_menu > ul > li > a:before{content:"|"; padding-right:15px; position:relative; top:-1.5px;}
+.footer .footer_menu > ul > li:first-child > a:before{display:none;}
+.footer .footer_contents{height:130px;}
+.footer .footer_contents > div{float:left; width:20%;}
+.footer .footer_contents h5{font-weight:700; font-size:14px; padding:10px 0;}
+.footer .footer_last{position:relative;}
+.footer .footer_last .copyright{padding-bottom:15px;}
+.footer .footer_last .copyright strong{color:#e74c3c;}
+.footer .footer_last .footer_sns{position:absolute; bottom:15px; right:0;}
+.footer .footer_last .footer_sns a{font-size:28px; color:#e8e8e8; letter-spacing:-0.5px;}
+.footer .footer_last .footer_sns a:hover{color:white;}
