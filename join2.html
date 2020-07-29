@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio_Pizza - Login page</title>
+    <title>Portfolio_Pizza - join page</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/join2.css">
 </head>
 <body>
-    
     <div id="header">
         <div class="main_menu">
             <div class="row">
                 <div class="login_menu">
                     <a href="index.html">Home</a>
                     <a href="login.html">Login</a>
-                    <a href="join.html">Join</a>
+                    <a href="join2.html">join2</a>
                 </div>
                 <div class="sns_menu">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i><span class="blind">페이스북</span></a>
@@ -88,31 +87,108 @@
         </div>
         
     </article>
-    <div class="join_confirm">
-        <span>MEMBER</span><p>MEMBER</p>
-        <div class="btn">
-            <input type="submit" value="로그인">
-            <input type="reset" value="회원가입">
-        </div>
-    </div>
 
-    <section class="login_page">
-        <div class="loginbox row">
-            <h2>로그인</h2> <p>LOGIN</p>
-            <form action="#" method="post" class="login_form">
+    <section id="join2_page">
+        <div class="join2_box join_row">
+            <h2>회원가입</h2>
+            <form action="#" method="post" class="join2_form">
                 <fieldset>
-                    <legend>로그인하기</legend>
-                    <p>회원로그인</p><br>
-                    <label for="id_lbl"></label>
-                    <input type="text" class="w630" id="id_lbl" placeholder="아이디를 입력해 주세요."><br>
-                    <input type="text" class="w630" id="pw_lbl" placeholder="비밀번호를 입력해 주세요.">
+                    <legend>회원가입양식</legend>
+                    <p class="info_pilsoo pilsoo_item">필수입력</p>
+                    <ul class="info_list">
+                        <li>
+                            <label for="name_lbl" class="tit_lbl pilsoo_item">작성자명</label>
+                            <div class="info_content">
+                                <input required class="w100p" type="text" id="name_lbl" placeholder="이름을 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="password_lbl" class="tit_lbl pilsoo_item">비밀번호</label>
+                            <div class="info_content">
+                                <input class="w100p" type="password" id="password_lbl" placeholder="비밀번호를 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="passwordok_lbl" class="tit_lbl pilsoo_item">비밀번호 확인</label>
+                            <div class="info_content">
+                                <input class="w100p" type="password" id="passwordok_lbl" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="phone_lbl" class="tit_lbl pilsoo_item">연락처</label>
+                            <div class="info_content">
+                                <input class="w100p" type="text" id="phone_lbl" placeholder='휴대폰 번호 "-"없이 숫자만 입력해 주세요'>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="email_lbl" class="tit_lbl pilsoo_item">이메일</label>
+                            <div class="info_content">
+                                <input class="w30p" type="text" id="email_lbl">
+                                <span>@</span>
+                                <input class="w30p" type="text" id="domain" disabled>
+                                <select id="email_choice" class="w30p">
+                                    <option value="nochoice">-이메일선택-</option>
+                                    <option value="naver.com">네이버</option>
+                                    <option value="daum.net">다음</option>
+                                    <option value="self">직접입력</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="addr_lbl" class="tit_lbl">주소</label>
+                            <div class="info_content addr_box">
+                                <input class="w30p mb3 zipcode" type="text" id="addr_lbl"> <button type="button">우편번호</button><br>
+                                <input class="w85p mb3" type="text" id="addr1"> <span>(도로명주소)</span><br>
+                                <input class="w85p mb3" type="text" id="addr2"> <span>(지번주소)</span><br>
+                                <input class="w85p" type="text" id="addr3"> <span>(나머지주소)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="birthday" class="tit_lbl">생년월일</label>
+                            <div class="info_content">
+                                <input class="w30p" type="text" id="birthday" placeholder="2000-01-22">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="tit_lbl">성별</label>
+                            <div class="info_content gender_area">
+                                <input type="radio" name="gender" id="male" vlaue="남">
+                                <label for="male">남</label>
+                                <input type="radio" name="gender" id="female" value="여">
+                                <label for="female">여</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="tit_lbl">선호하는 피자</label>
+                            <div class="info_content pizza_area">
+                                <input type="checkbox" id="all">
+                                <label for="all">전체선택</label>
+                                <input type="checkbox" id="pizza1" name="pizza1" value="일반 피자">
+                                <label for="pizza1">일반 피자</label>
+                                <input type="checkbox" id="pizza2" name="pizza2" value="치즈 피자">
+                                <label for="pizza2">치즈 피자</label>
+                                <input type="checkbox" id="pizza3" name="pizza3" value="파인애플 피자">
+                                <label for="pizza3">파인애플 피자</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="tit_lbl" for="query">문의내용</label>
+                            <div class="info_content">
+                                <textarea name="query" id="query" placeholder="간단한 상담요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.
+전화상담 희망시 기재부탁드립니다."></textarea>
+                                
+                            </div>
+                        </li>
+                    </ul>
                     <div class="btn">
-                        <input type="submit" value="확인" class="w630">
+                        <input type="submit" value="전송">
+                        <input type="reset" value="취소">
                     </div>
                 </fieldset>
             </form>
         </div>
     </section>
+
 
     <div id="footer">
         <div class="company_menu">
@@ -156,7 +232,7 @@
                 <ul class="cf">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="login.html">로그인</a></li>
-                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="join2.html">회원가입</a></li>
                     <li><a href="#">이용약관</a></li>
                     <li><a href="#">개인정보 취급방법</a></li>
                     <li><a href="#">온라인문의</a></li>

@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+
+::placeholder{color:black; font-style:italic; font-size:13px;}
+.join_row{max-width:900px; margin:0 auto;}
+
+.slide_outer{height:450px; position:relative; overflow:hidden; margin-top:-90px;}
+.slide_inner > div{height:450px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;}
+.slide_inner > div:before{content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
+.slide_inner > div:nth-child(1){background-image:url(../images/main_metapo01.jpg); z-index:1;}
+.slide_inner > div:nth-child(2){background-image:url(../images/main_metapo02.jpg)}
+.slide_inner > div:nth-child(3){background-image:url(../images/main_metapo03.jpg)}
+.slide_inner > div > .text{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;
+color:white; z-index:9999;}
+.slide_inner .text > h3{font-size:40.53px; margin:0 0 15px;}
+.slide_inner .text > p{font-size:17.37px; margin-bottom:100px;}
+
+
+#join2_page{padding:50px 0; background:white}
+#join2_page .join2_box h2{text-align:center; font-size:30px; padding-bottom:30px;}
+.join2_form .info_pilsoo{padding-left:20px; padding-bottom:10px; border-bottom:1px solid #000; font-size:15px; color:#f00;}
+.join2_form .pilsoo_item{position:relative;}
+.join2_form .pilsoo_item:before {content:"※"; position:absolute; left:1.5px; top:-2px; width:15px; font-weight:bold; font-size:17px; color:#f00;}
+.join2_form .info_list {padding:10px 0; border-bottom:1px solid #ccc;}
+.join2_form .info_list li{padding:10px 0;}
+.join2_form .tit_lbl{display:inline-block; width:20%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:20px;}
+.join2_form .info_content{display:inline-block; width:79%; vertical-align:top;}
+.join2_form .info_content input[type=text],
+.join2_form .info_content input[type=password],
+.join2_form .info_content input[type=date],
+.join2_form .info_content select{height:45px; border:1px solid #ccc; padding:0 1em; vertical-align:top; border-radius:5px;}
+.join2_form .w100p{width:100%;}
+.join2_form .w85p{width:85%;}
+.join2_form .w30p{width:30%;}
+.join2_form .addr_box span {line-height:45px;}
+.join2_form .mb3 {margin:0px 0 5px;}
+.join2_form .info_content button{height:45px; width:80px; border:1px solid #ccc; border-radius:5px;}
+.join2_form .info_content button:hover{background:#000; color:#fff;}
+.join2_form .gender_area label,
+.join2_form .pizza_area label{line-height:45px; padding-right:15px;}
+.join2_form .info_content textarea {
+    height: 245px; width:100%;
+    border:1px solid #ccc; 
+    /* textarea는 글꼴 관련 스타일을 상위태그에서 상속받지 못함 */
+    font-size: 15px; letter-spacing: -1px;
+    color: #444; padding: 10px; line-height: 1.5;
+    resize:none; }
+.join2_form .btn { margin-top:20px; text-align:center }    
+.join2_form .btn input { width:80px; height:40px; 
+    background:#000; color:#fff; 
+    border:none; border-radius:5px; 
+    font-size:18px; margin:0 20px }
+.join2_form .btn input[type=submit] {
+    background:red }
