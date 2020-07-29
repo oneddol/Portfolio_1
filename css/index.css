@@ -4,7 +4,7 @@
 
 /*공통구역을 제외한 메인페이지 스타일*/
 
-#section{margin-top:40px;}
+#section{margin-top:-90px;}
 .slide_outer{height:1016px; position:relative; overflow:hidden;}
 .slide_inner > div{height:1016px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;}
 .slide_inner > div:before{content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
@@ -56,11 +56,29 @@ color:white; z-index:9999;}
 /*여기 완성시켜야해!*/
 .cs_notice{padding:60px 0;}
 .cs_notice > div{float:left; width:31.33%;}
-.cs_notice .notice{border:1px solid red;}
+.cs_notice .notice{position:relative;}
+.cs_notice .notice > h3{font-size:22px; color:#3a3a3a; margin:0 0 10px; padding: 0 5px 10px 0; display:inline-block;}
+.cs_notice .notice > p{font-size:14px; color:#a80632; font-weight:bold; display:inline-block;}
+.cs_notice .notice .button{border:1px solid #707070; position:absolute; top:0; right:15px; padding:1px 5px; background:#707070;
+    color:#fff; font-size:12px;}
+.cs_notice .notice ul{list-style:square; padding-left:20px; color:#6e6e6e; font-size:1px;}
+.cs_notice .notice ul li > a{font-size:14px; padding-left:-1em; display:inline-block; padding:5px 0;}
+
 .cs_notice .youtube iframe{width: 100%;}
-.cs_notice .call_center{border:1px solid red;}
 
+.cs_notice .call_center{padding-left:15px; line-height:2em; border:1px solid red;}
+.cs_notice .call_center h4{font-size:25px;}
+.cs_notice .call_center p{font-size:14px; color:#777;}
+.cs_notice .call_center span{font-size:25.2px; color:#a80632; padding:10px 0; display:block;}
 
-.portfolio .whole_box{position:relative; border:1px solid red;}
-/* .portfolio .img_box{width:23%; overflow:hidden; position:absolute; top:0; left:0; float:left; margin:1.6%; height:250px;} */
-.portfolio .img_box > img{background-size:cover; background-position:center; background-repeat:no-repeat;}
+.portfolio{padding:50px 0;}
+.portfolio h2{text-align:center; font-size:38px;color:#3a3a3a;}
+.portfolio > p{text-align:center;}
+.portfolio .under_bar{width:50px; height:3px;  margin:15px auto 45px; background:#1f1f1f}
+.portfolio ul li{float:left; width:25%; padding:5px 5px; }
+.portfolio ul li a{display:block; text-align:center;}
+.portfolio ul li img{width:100%; transition:all 0.5s;}
+.portfolio ul li p{color:#434343; font-size:14px; padding:5px 0; margin:5px 0; transition:all 0.5s;}
+.portfolio .overlay{background:rgba(0,0,0,1); z-index:9999;}
+.portfolio ul li:hover p{background:#c7162d; color:white;}
+.portfolio ul li:hover img{opacity:0.7}
