@@ -23,7 +23,7 @@ table { border-collapse:collapse;
     width:100%; }
 button, input { border:none }    
 button[type=submit], 
-input[type=submit],
+input[type=submit], input[type=reset],
 button[type=button], 
 input[type=button] { cursor:pointer }
 fieldset { border:none }
