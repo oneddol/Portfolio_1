@@ -6,6 +6,14 @@
 
 #section{margin-top:-90px;}
 .slide_outer{height:1016px; position:relative; overflow:hidden;}
+.slide_outer .arr{position:absolute; top:50%; transform:translateY(-50%); color:rgba(255,255,255,0.8); font-size:100px; z-index:99999;}
+.slide_outer .prev{right:0; height:1016px; width:300px; line-height:1016px; text-align:center; opacity:0; transition:all 0.5s;}
+.slide_outer .prev:hover{ opacity:1}
+.slide_outer .next{left:0; height:1016px; width:300px; line-height:1016px; text-align:center; opacity:0; transition:all 0.5s;}
+.slide_outer .next:hover{ opacity:1}
+.slide_outer .dot_box{position:absolute; bottom:30px; left:50%; transform:translate(-50%); z-index:999999;}
+.slide_outer .dot_box > a{width:15px; height:15px; border-radius:50%; display:inline-block; background:rgba(255,255,255,0.5);}
+.slide_outer .dot_box > a.active{background:rgba(255,255,255,1);}
 .slide_inner > div{height:1016px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;}
 .slide_inner > div:before{content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
 .slide_inner > div:nth-child(1){background-image:url(../images/main_metapo01.jpg); z-index:1;}
@@ -59,8 +67,10 @@ color:white; z-index:9999;}
 .cs_notice .notice > p{font-size:14px; color:#a80632; font-weight:bold; display:inline-block;}
 .cs_notice .notice .button{border:1px solid #707070; position:absolute; top:0; right:15px; padding:1px 5px; background:#707070;
     color:#fff; font-size:12px;}
+.cs_notice .notice .button:hover{background:#000; color:#fff;}
 .cs_notice .notice ul{list-style:square; padding-left:20px; color:#6e6e6e; font-size:1px;}
 .cs_notice .notice ul li > a{font-size:14px; padding-left:-1em; display:inline-block; padding:5px 0;}
+.cs_notice .notice ul li:hover a{color:#000;}
 .cs_notice .youtube iframe{width: 100%;}
 .cs_notice .call_center{padding-left:25px; line-height:2em;}
 .cs_notice .call_center h4{font-size:25px; color:#3a3a3a;}
