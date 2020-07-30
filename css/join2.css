@@ -5,18 +5,6 @@
 ::placeholder{color:black; font-style:italic; font-size:13px;}
 .join_row{max-width:900px; margin:0 auto;}
 
-.slide_outer{height:450px; position:relative; overflow:hidden; margin-top:-90px;}
-.slide_inner > div{height:450px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;}
-.slide_inner > div:before{content:""; position:absolute; top:0; left:0; right:0; bottom:0; }
-.slide_inner > div:nth-child(1){background-image:url(../images/main_metapo01.jpg); z-index:1;}
-.slide_inner > div:nth-child(2){background-image:url(../images/main_metapo02.jpg)}
-.slide_inner > div:nth-child(3){background-image:url(../images/main_metapo03.jpg)}
-.slide_inner > div > .text{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;
-color:white; z-index:9999;}
-.slide_inner .text > h3{font-size:40.53px; margin:0 0 15px;}
-.slide_inner .text > p{font-size:17.37px; margin-bottom:100px;}
-
-
 #join2_page{padding:50px 0; background:white}
 #join2_page .join2_box h2{text-align:center; font-size:30px; padding-bottom:30px;}
 .join2_form .info_pilsoo{padding-left:20px; padding-bottom:10px; border-bottom:1px solid #000; font-size:15px; color:#f00;}
