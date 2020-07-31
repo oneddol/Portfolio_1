@@ -101,18 +101,90 @@
     </div>
     
     <section id="contact_section">
-        <table class="row">
+        <table border="1" class="row">
             <tr>
-                <td>1</td>
+                <td class="contact_tit">제목</td>
                 <td>
-                    <div><input type="text" textholder="dasdsadsad"></div>
+                    <div><input type="text" placeholder="문의하실 제목을 입력해주세요."></div>
+                </td>
+            </tr>
+       
+            <tr>
+                <td class="contact_tit">성명</td>
+                <td>
+                    <div><input type="text" placeholder="성명을 입력해주세요."></div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td class="contact_tit">이메일</td>
+                <td>
+                    <div class="contact_w30p"><input type="text" placeholder=""></div>
+                    <span>@</span>
+                    <div class="contact_w30p"><input type="text" placeholder="" disabled></div>
+                    <select name="" class="contact_w30p" id="">
+                        <option value="nochoice">-이메일 선택-</option>
+                        <option value="naver.com">NAVER</option>
+                        <option value="daum.net">DAUM</option>
+                        <option value="google.com">GOOGLE</option>
+                        <option value="self">직접 입력하기</option>
+                    </select>
+                </td>
+            </tr>
+     
+            <tr>
+                <td class="contact_tit">연락처</td>
+                <td>
+                    <div class="contact_w80"><input type="text" placeholder=""></div><span>-</span>
+                    <div class="contact_w80"><input type="text" placeholder=""></div><span>-</span>
+                    <div class="contact_w80"><input type="text" placeholder=""></div>
+                </td>
+            </tr>
+     
+            <tr>
+                <td class="contact_tit">내용</td>
+                <td>
+                    <div><textarea name="" id="" placeholder="문의내용을 입력해주세요."></textarea></div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td colspan="2"  class="agree">· 개인정보의 수집 및 이용목적</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox">
+                    <label for="">개인정보의 수집 및 이용목적에 동의합니다. 올라가라.........</label>
                 </td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>4</td>
+                <td colspan="2" class="txt_area">
+                    <textarea name="" id="" disabled>
+▶ 개인정보의 수집 및 이용목적
+
+- 서비스 이용에 따른 본인식별, 실명확인, 가입의사 확인, 연령제한 서비스 이용
+- 고지사항 전달, 불만처리 의사소통 경로 확보, 물품배송 시 정확한 배송지 정보 확보
+- 신규 서비스 등 최신정보 안내 및 개인맞춤서비스 제공을 위한 자료
+- 기타 원활한 양질의 서비스 제공 등
+                        
+
+▶ 수집하는 개인정보의 항목
+- 이름, 이메일, 주민등록번호, 주소, 연락처, 핸드폰번호, 그 외 선택항목
+                        
+▶ 개인정보의 보유 및 이용기간
+
+- 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 시 지체 없이 파기합니다.
+- 다만, 원활한 서비스의 상담을 위해 상담 완료 후 내용을 3개월간 보유할 수 있으며
+전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.
+                        </textarea>
+
+                </td>
             </tr>
         </table>
+        <div class="btn row">
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+        </div>
 
     </section>
 
@@ -126,9 +198,9 @@
                         <li><a href="#">오시는길</a></li>
                     </ul>
                 </li>
-                <li><a href="#">product</a>
+                <li><a href="#">BUSINESS</a>
                     <ul>
-                        <li><a href="product.html">사업소개01</a></li>
+                        <li><a href="business.html">사업소개01</a></li>
                     </ul>
                 </li>
                 <li><a href="#">PRODUCT</a>
