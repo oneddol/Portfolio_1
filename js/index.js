@@ -1,6 +1,6 @@
 (function($){
 
-    $('#content').load(main.html)
+    $('#content').load('main.html')
 
     $('.login_menu > a').on('click', function(e){
         e.preventDefault
