@@ -1,5 +1,8 @@
 (function($){
 
+    $(window).load(function(){
+        $('.loadAni').delay(500).fadeOut(500)
+    })
     $('#content').load('main.html')
 
     $('.login_menu > a').on('click', function(e){

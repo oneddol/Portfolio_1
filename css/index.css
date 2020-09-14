@@ -86,3 +86,6 @@ color:white; z-index:9999;}
 .portfolio .overlay{background:rgba(0,0,0,1); z-index:9999;}
 .portfolio ul li:hover p{background:#c7162d; color:white;}
 .portfolio ul li:hover img{opacity:0.7}
+
+.loadAni{position:fixed; top:0; left:0; right:0; bottom:0; background:white; z-index:99999; font-size:50px;}
+.loadAni i{position:absolute; top:40%; transform:translateY(-50%); width:100%; text-align:center;}
