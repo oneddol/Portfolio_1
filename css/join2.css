@@ -1,7 +1,4 @@
 @charset "utf-8";
-@import url(reset.css);
-@import url(common.css);
-
 ::placeholder{color:black; font-style:italic; font-size:13px;}
 .join_row{max-width:900px; margin:0 auto;}
 
