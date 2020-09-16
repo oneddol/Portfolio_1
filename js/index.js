@@ -12,19 +12,19 @@
         $('#content').load(url)
     })
 
-    $('.h1_nav > h1 > a').on('click', function(e){
+    $('.h1_nav .nav .depth1 > li > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
         $('#container').remove()
-        // $('#content').load(url)
+        $('#content').load(url)
     })
 
-    // $('.h1_nav .nav .depth1 > li > .depth2 > li > a').on('click', function(e){
-    //     e.preventDefault()
-    //     var url = $(this).attr('href')
-    //     $('#container').remove()
-    //     $('#content').load(url)
-    // })
+    $('.h1_nav .nav .depth1 > li > .depth2 > li > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#container').remove()
+        $('#content').load(url)
+    })
 
 
 
