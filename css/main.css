@@ -31,7 +31,8 @@ body{background:black}
     font-size:25px; margin-bottom:120px;
 }
 /* 화살표 및 도트버튼 */
-.mainSlideOuter .marrow{position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:rgba(255,255,255,0.8); background:none; border:none}
+.mainSlideOuter .marrow{position:absolute; top:50%; transform:translateY(-50%); font-size:50px; color:rgba(255,255,255,0.8); background:none; border:none; opacity:0.5; transition:all 0.5s;}
+.mainSlideOuter .marrow:hover{opacity:1;}
 .mainSlideOuter .prevArrow{left:100px; z-index:99999;}
 .mainSlideOuter .nextArrow{right:100px;}
 
@@ -252,7 +253,7 @@ body{background:black}
 
 /* greeting style */
 
-.greeting_header{background:#000; color:#fff; padding:15px; border:1px solid red;}
+.greeting_header{background:#000; color:#fff; padding:15px;}
 .greeting_header .greeting_map{text-align:right; padding:10px 0;}
 .greeting_header .greeting_map > span{font-size:13px;}
 .greeting_header .greeting{text-align:center;}
@@ -263,6 +264,7 @@ body{background:black}
 .greeting_header .greeting .greet_nav .active{background:red; color:white;}
 .greeting_header .greeting .greet_nav > a:hover{opacity:0.8}
 
+#greeting_section{background:white;}
 #greeting_section .greet_main{padding:30px 0 30px; border-bottom:1px solid #333;}
 #greeting_section .greet_main h3{font-size:32px; color:#494949; display:inline-block;}
 #greeting_section .greet_main > p{font-size:12px; color:#494949; display:inline-block;}
@@ -377,12 +379,12 @@ body{background:black}
 
 /* notice style */
 
-/* .noticePage{padding:136px 0;}
+.noticePage{padding:136px 0;}
 .noticePage h2{text-align:center; font-size:25px; margin:50px 0 20px;}
 .sbox{text-align:center; }
 .sbox select{height:30px; vertical-align:middle;}
 .sbox input[type=text]{height:30px; width:300px; text-indent:1em; vertical-align:middle;}
-.sbox input[type=submit]{height:30px; background:#ddd; padding:0 8px; border-radius:5px; vertical-align:middle;} */
+.sbox input[type=submit]{height:30px; background:#ddd; padding:0 8px; border-radius:5px; vertical-align:middle;}
 
 /* .noticeTable td{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;} */
 
