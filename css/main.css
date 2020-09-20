@@ -287,7 +287,7 @@ body{background:black}
 
 /* business style */
 
-/* .business_header{background:#000; color:#fff; padding:15px;}
+.business_header{background:#000; color:#fff; padding:15px;}
 .business_header .business_map{text-align:right; padding:10px 0;}
 .business_header .business_map > span{font-size:13px;}
 .business_header .business{text-align:center;}
@@ -298,7 +298,8 @@ body{background:black}
 .business_header .business .business_nav .active{background:red; color:white;}
 .business_header .business .business_nav > a:hover{opacity:0.8}
 
-#business_section .business_main{padding:30px 0 30px; border-bottom:1px solid #333;}
+#business_section{padding:30px 0 30px; background:white}
+#business_section .business_main{border-bottom:1px solid #333;}
 #business_section .business_main h3{font-size:32px; color:#494949; display:inline-block;}
 #business_section .business_main > p{font-size:12px; color:#494949; display:inline-block;}
 #business_section .business_intro{padding:20px; margin:10px 0; background:#f9f9f9;}
@@ -312,14 +313,14 @@ body{background:black}
 #business_section .biz_content > p{font-size:14px; color:#777; padding:27px 15px 27px 15px;}
 #business_section .biz_content ul li{border-top:1px solid #ddd; padding:10px 15px;}
 #business_section .biz_content ul li > h4{font-size:21px; color:#a94442;}
-#business_section .biz_content ul li > p{font-size:17.85px; color:#333;} */
+#business_section .biz_content ul li > p{font-size:17.85px; color:#333;}
 
 
 
 
 /* product style */
 
-/* .product_header{background:#000; color:#fff; padding:15px;}
+.product_header{background:#000; color:#fff; padding:15px;}
 .product_header .product_map{text-align:right; padding:10px 0;}
 .product_header .product_map > span{font-size:13px;}
 .product_header .product{text-align:center;}
@@ -343,6 +344,8 @@ body{background:black}
     background:rgba(0,0,0,0.8); width:309px; height:206px; margin:auto 0; line-height:210px;
     font-size:30px; color:#ddd; font-weight:bold; transition:all 0.5s;}
 #product_section .product_box .overlay:hover{background:rgba(255,255,255,0.2); color:black;}
+
+
 
 /* contact style */
 /* .contact_w30p{width:30%; display:inline-block; border:1px solid #999;  border-radius:5px; margin:0 2px;}
@@ -373,7 +376,7 @@ body{background:black}
 #contact_section .btn input{width:100px; height:50px; font-weight:bold; border-radius:5px;}
 #contact_section .btn input[type=submit]{background:#000; color:#fff;}
 #contact_section .btn input[type=submit]:hover{background:red; color:#eee;}
-#contact_section .btn input[type=reset]:hover{background:#fff; color:#000;} */ */
+#contact_section .btn input[type=reset]:hover{background:#fff; color:#000;} */
 
 
 
@@ -396,6 +399,7 @@ body{background:black}
 .noticeTable table{border:none; font-size:14px;}
 .noticeTable th, .noticeTable td{border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:10px 5px;}
 .noticeTable th{background:#f2f2f2; border-bottom:1px solid #333;}
+.noticeTable tbody tr{color:white}
 .noticeTable tbody tr:hover {background:#ddd; color:green; font-weight:bold;}
 .noticeTable tbody td:nth-child(1), 
 .noticeTable tbody td:nth-child(3),
@@ -403,6 +407,6 @@ body{background:black}
 .noticeTable tbody td:nth-child(5){text-align:center}
 .noticePage .numlist{text-align:center; margin:20px 0; font-size:16px}
 .noticePage .numlist span{background:#ddd; padding:5px 8px; display:inline-block;}
-.noticePage .numlist a{padding:5px; display:inline-block; border:1px solid #ddd;}
+.noticePage .numlist a{padding:5px; display:inline-block; border:1px solid #ddd; color:white}
 .noticePage .numlist a:hover{background:#ddd;}
-.noticePage .numlist a.on{background:#ddd;}
+.noticePage .numlist a.on{background:#ddd; color:black}
