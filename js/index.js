@@ -26,6 +26,13 @@
         $('#content').load(url)
     })
 
+    $('#footer .company_menu .depth1 > li > ul > li > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#container').remove()
+        $('#content').load(url)
+    })
+
     //theader scroll bar
     var scrollSize = $(document).height()-$(window).height()
     $(window).on('scroll', function(){

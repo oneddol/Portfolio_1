@@ -1,12 +1,4 @@
 (function($){
-
-    // $('h1_nav .nav > .depth1 > li > .depth2 > li > a').on('click', function(e){
-    //     e.preventDefault()
-    //     var url = $(this).attr('href')
-    //     $('#container').remove()
-    //     $('#content').load(url)
-    // })
-
     
     // slick 이벤트
     $('.mainSlideInner').slick({
@@ -68,6 +60,12 @@
             $('.curriBox .column').eq(1).removeClass('animate__fadeIn')
             $('.curriBox .column').eq(2).removeClass('animate__fadeInRight')
         }
+    })
+
+    // greeting.html
+    $('.greeting_header .greeting .greet_nav > a').on('click', function(){
+        $(this).addClass('.active')
+        $(this).siblings().removeClass('.active')
     })
 
 })(jQuery)

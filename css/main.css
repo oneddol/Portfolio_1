@@ -331,6 +331,7 @@ body{background:black}
 .product_header .product .product_nav .active{background:red; color:white;}
 .product_header .product .product_nav > a:hover{opacity:0.8}
 
+#product_section{background:white}
 #product_section .product_head{padding:25px 0; border-bottom:1px solid #494949;}
 #product_section .product_head h3{font-size:32px; color:#494949; display:inline-block;}
 #product_section .product_head > p{font-size:12px; color:#494949; display:inline-block;}
@@ -343,26 +344,26 @@ body{background:black}
 #product_section .product_box .overlay{padding:0px 0; position:absolute; top:0; left:0; right:0; bottom:0;
     background:rgba(0,0,0,0.8); width:309px; height:206px; margin:auto 0; line-height:210px;
     font-size:30px; color:#ddd; font-weight:bold; transition:all 0.5s;}
-#product_section .product_box .overlay:hover{background:rgba(255,255,255,0.2); color:black;}
+#product_section .product_box .overlay:hover{background:rgba(255,255,255,0.2); color:white;}
 
 
 
 /* contact style */
-/* .contact_w30p{width:30%; display:inline-block; border:1px solid #999;  border-radius:5px; margin:0 2px;}
+.contact_w30p{width:30%; display:inline-block; border:1px solid #999;  border-radius:5px; margin:0 2px;}
 .contact_w80{width:80px; display:inline-block; border-bottom:1px solid #000;  margin:0 1em;}
 
 .contact_header{background:#000; color:#fff; padding:15px;}
 .contact_header .contact_map{text-align:right; padding:10px 0;}
 .contact_header .contact_map > span{font-size:13px;}
-.contact_header .contact{text-align:center;}
-.contact_header .contact  > h2{display:inline-block; padding:20px 0; font-size:32px; color:#494949;}
-.contact_header .contact  > p{display:inline-block; font-size:12px; color:#6e6e6e;}
+.contact_header .contact{text-align:center; color:white;}
+.contact_header .contact  > h2{display:inline-block; padding:20px 0; font-size:32px;}
+.contact_header .contact  > p{display:inline-block; font-size:12px;}
 .contact_header .contact .contact_nav{padding:10px 0 30px;}
-.contact_header .contact .contact_nav > a{display:inline-block; width:8%; height:30px; background:#e8e8e8; color:black;line-height:30px; font-weight:bold;}
+.contact_header .contact .contact_nav > a{display:inline-block; width:8%; height:30px; background:#e8e8e8; color:black; line-height:30px; font-weight:bold; border-radius:5px;}
 .contact_header .contact .contact_nav .active{background:red; color:white;}
 .contact_header .contact .contact_nav > a:hover{opacity:0.8}
 
-#contact_section{padding:15px;}
+#contact_section{padding:15px; background:white}
 #contact_section table{border:none;}
 #contact_section .contact_tit{width:20%; text-align:center; font-size:14px; color:#494949; padding:13px 8px;
      background:#e9e9e9}
@@ -376,15 +377,15 @@ body{background:black}
 #contact_section .btn input{width:100px; height:50px; font-weight:bold; border-radius:5px;}
 #contact_section .btn input[type=submit]{background:#000; color:#fff;}
 #contact_section .btn input[type=submit]:hover{background:red; color:#eee;}
-#contact_section .btn input[type=reset]:hover{background:#fff; color:#000;} */
+#contact_section .btn input[type=reset]:hover{background:#fff; color:#000;}
 
 
 
 /* notice style */
 
 .noticePage{padding:136px 0;}
-.noticePage h2{text-align:center; font-size:25px; margin:50px 0 20px;}
-.sbox{text-align:center; }
+.noticePage h2{text-align:center; font-size:25px; margin:50px 0 20px; color:white;}
+.sbox{text-align:center; margin-bottom:20px; text-align:right}
 .sbox select{height:30px; vertical-align:middle;}
 .sbox input[type=text]{height:30px; width:300px; text-indent:1em; vertical-align:middle;}
 .sbox input[type=submit]{height:30px; background:#ddd; padding:0 8px; border-radius:5px; vertical-align:middle;}
