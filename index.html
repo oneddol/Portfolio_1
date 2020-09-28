@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mainRwd.css">
     <script src="js/prefixfree.min.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
@@ -36,6 +37,10 @@
         <div class="h1_nav">
             <div class="row">
                 <h1><a href="index.html"><img src="images/logo.png" alt="메인페이지"></a></h1>
+                <div class="openNav">
+                    <span class="blind">메뉴열기</span>
+                    <i class="fas fa-bars"></i>
+                </div>
                 <nav class="nav">
                     <ul class="depth1">
                         <li><a href="greeting.html">COMPANY</a>
@@ -69,6 +74,10 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="closeNav">
+                    <span class="blind">메뉴닫기</span>
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         </div>
         <div class="scrolling-bar"></div>
@@ -160,9 +169,9 @@
         </div>
     </div>
 
-    <div class="loadAni">
+    <!-- <div class="loadAni">
         <i class="fas fa-pizza-slice fa-spin"></i>
-    </div>
+    </div> -->
 
 <script src="js/index.js"></script>
 <script src="js/common.js"></script>

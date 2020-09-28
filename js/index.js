@@ -51,15 +51,42 @@
         if(sct>=$('#header').height()){
             $('#header').css({
                 position:'fixed',
-                background:'rgba(0,0,0,0.9)'
+                background:'rgba(0,0,0,0.8)'
+            })
+            $('#header .main_menu').css({
+                display:'none'
             })
         }   else {
             $('#header').css({
                 position:'relative',
                 background:'rgba(0,0,0,1)'
         })
+        $('#header .main_menu').css({
+            display:'block'
+        })
     }
 })
+
+    // 반응형 사이즈 조정시 네이브박스 오픈여부
+    function resize(){
+        var ww = $(window).width()
+        if(ww>767 && flag){
+            $('.h1_nav .nav').show()
+            $('.openNav, .closeNav, .depth2').hide()
+        }
+    }
+
+    // 반응형 nav박스 작동
+    $('.h1_nav .openNav').on('click', function(){
+        $(this).next().stop().slideDown(300)
+        $(this).hide()
+        $(this).nextAll('.closeNav').css({display:'block'})
+    })
+    $('.h1_nav .closeNav').on('click', function(){
+        $(this).prev().stop().slideUp(300)
+        $(this).hide()
+        $(this).prevAll('.openNav').css({display:'block'})
+    })
 
 
 
