@@ -34,7 +34,7 @@
     })
 
     //header scroll bar
-    var flag=true;
+    
     $(window).on('scroll', function(){
         var scrollSize = $(document).height()-$('#header').height()-$(window).height();
         var sct = $(this).scrollTop();
@@ -59,7 +59,7 @@
         }   else {
             $('#header').css({
                 position:'relative',
-                background:'rgba(0,0,0,1)'
+                background:'rgba(0,0,0,0.19)'
         })
         $('#header .main_menu').css({
             display:'block'
@@ -67,14 +67,31 @@
     }
 })
 
+    // nav depth2 슬라이드다운
+    // $('.h1_nav .depth1 > li').on('mouseover', function(){
+    //     $('.h1_nav .depth1 > li > .depth2').slideDown(300)
+    // })
+
     // 반응형 사이즈 조정시 네이브박스 오픈여부
-    function resize(){
+    res()
+
+    var flag=true;
+    function res(){
         var ww = $(window).width()
         if(ww>767 && flag){
             $('.h1_nav .nav').show()
             $('.openNav, .closeNav, .depth2').hide()
+            flag = false
+        } else if (ww<=767 && !flag){
+            $('.openNav').show()
+            $('.h1_nav .nav').hide()
+            flag=true
         }
     }
+
+    $(window).on('resize', function(){
+        res()
+    })
 
     // 반응형 nav박스 작동
     $('.h1_nav .openNav').on('click', function(){
