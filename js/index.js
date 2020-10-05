@@ -109,15 +109,15 @@
     $('.depth1 > li').on('click', function(){
         if(('html').hasClass('mobile')){
             $(this).toggleClass('on')
-            $(this).find('.depth2').stop().slideToggle(300)
+            $(this).find('.depth2').slideToggle(300)
             $(this).siblings().each(function(){
-                if($(this).css('display'==='block')){
+                if($(this).css('display'==='inline-block')){
                     $(this).find('.depth2').slideUp(300)
                     $(this).removeClass('on')
                 }
             })
         }
-        return false
+        return false;
     })
 
     // pc화면에서 1단계 메뉴 호버 시 2단계 메뉴 보이도록 하기

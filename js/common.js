@@ -17,6 +17,12 @@
         arrows: true, // 좌우화살표 사용여부(생략가능)
         prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
         nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+        responsive:[{
+            breakpoint:1025,
+            settings:{
+                arrows:false
+            }
+        }]
     })
 
     
