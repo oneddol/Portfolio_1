@@ -74,6 +74,7 @@
 
     // 반응형 사이즈 조정시 네이브박스 오픈여부
     res()
+    res2()
 
     var flag=true;
     function res(){
@@ -89,9 +90,47 @@
         }
     }
 
+    function res2(){
+        var ww = $(window).width()
+        if(ww>767){
+            $('html').addClass('pc').removeClass('mobile')
+        } else if(ww<=767){
+            $('html').addClass('mobile').removeClass('pc')
+        }
+    }
+
     $(window).on('resize', function(){
         res()
+        res2()
     })
+
+  // mobile화면에서 클릭 시 2단계 메뉴 보이도록 하기
+    $('.depth1 > li').on('click', function(){
+        if(('html').hasClass('mobile')){
+            $(this).toggleClass('on')
+            $(this).find('.depth2').stop().slideToggle(300)
+            $(this).siblings().each(function(){
+                if($(this).css('display'==='block')){
+                    $(this).find('.depth2').slideUp(300)
+                    $(this).removeClass('on')
+                }
+            })
+        }
+    })
+
+    // pc화면에서 1단계 메뉴 호버 시 2단계 메뉴 보이도록 하기
+    $('.depth1 > li').hover(
+        function(){
+            if($('html').hasClass('pc')){
+                $(this).find('.depth2').stop().slidDown(300)
+            }
+        },
+        function(){
+            if($('html').hasClass('pc')){
+                $(this).find('.depth2').stop().slideUp(300)
+            }
+        }
+    )
 
     // 반응형 nav박스 작동
     $('.h1_nav .openNav').on('click', function(){
