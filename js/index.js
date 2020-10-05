@@ -81,6 +81,7 @@
         var ww = $(window).width()
         if(ww>767 && flag){
             $('.h1_nav .nav').show()
+            $('.depth1 > li').removeClass('on')
             $('.openNav, .closeNav, .depth2').hide()
             flag = false
         } else if (ww<=767 && !flag){
@@ -116,18 +117,21 @@
                 }
             })
         }
+        return false
     })
 
     // pc화면에서 1단계 메뉴 호버 시 2단계 메뉴 보이도록 하기
     $('.depth1 > li').hover(
         function(){
             if($('html').hasClass('pc')){
-                $(this).find('.depth2').stop().slidDown(300)
+                $(this).find('.depth2').stop().slideDown(300)
+                $(this).addClass('on')
             }
         },
         function(){
             if($('html').hasClass('pc')){
                 $(this).find('.depth2').stop().slideUp(300)
+                $(this).removeClass('on')
             }
         }
     )
