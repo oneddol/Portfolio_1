@@ -71,11 +71,52 @@ $(window).scroll(function(){
     }
 })
 
+    // join page
+    var flagJoin = true
+    initJoin()
+    function initJoin(){
+        if($('html').hasClass('mobile')&&flagJoin){
+            $('.gender_area label, .pizza_area label').after('<br>')
+            $('#addr1').attr({placeholder:'도로명 주소'})
+            $('#addr2').attr({placeholder:'지번 주소'})
+            $('#addr3').attr({placeholder:'나머지 주소'})
+            flagJoin=false
+        } else if ($('html').hasClass('pc')&&!flagJoin){
+            $('.gender_area, .pizza_area').find('br').remove()
+            $('#addr1').attr({placeholder:''})
+            $('#addr2').attr({placeholder:''})
+            $('#addr3').attr({placeholder:''})
+            flagJoin=true
+        }
+    }
+
+    $(window).resize(function(){
+        initJoin()
+    })
+
+        // 이메일 선택 옵션따라 내용 채우기   왜안될까ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
+    $('#email_choice').on('change', function(){
+        $('#email_choice option:selected').each(function(){
+            if($(this).val()==='nochoice'){
+                $('#domain').val('')
+                $('#domain').attr('disabled', true)
+            } else if ($(this).val()==='self'){
+                $('#domain').val('')
+                $('#domain').attr('disabled', false)
+            } else {
+                $('#domain').val($(this).val())
+                $('#domain').attr('disabled', true)
+            }
+        })
+    })
+
 
     // greeting.html
     $('.greeting_header .greeting .greet_nav > a').on('click', function(){
         $(this).addClass('.active')
         $(this).siblings().removeClass('.active')
     })
+
+
 
 })(jQuery)

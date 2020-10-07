@@ -16,9 +16,12 @@
 
     $('.h1_nav .nav .depth1 > li > a').on('click', function(e){
         e.preventDefault()
-        var url = $(this).attr('href')
-        $('#container').remove()
-        $('#content').load(url)
+        if($('html').hasClass('pc')){
+            var url = $(this).attr('href')
+            $('#container').remove()
+            $('#content').load(url)
+        }
+        
     })
 
     $('.h1_nav .nav .depth1 > li > .depth2 > li > a').on('click', function(e){
@@ -108,18 +111,18 @@
     })
 
   // mobile화면에서 클릭 시 2단계 메뉴 보이도록 하기
-    $('.depth1 > li').on('click', function(){
-        if(('html').hasClass('mobile')){
+    $('.depth1 > li').on('click', function(e){
+        e.preventDefault()
+        if($('html').hasClass('mobile')){
             $(this).toggleClass('on')
-            $(this).find('.depth2').slideToggle(300)
+            $(this).find('.depth2').stop().slideToggle(0)
             $(this).siblings().each(function(){
-                if($(this).css('display'==='inline-block')){
-                    $(this).find('.depth2').slideUp(300)
+                if($(this).css('display')==='inline-block'){
+                    $(this).find('.depth2').slideUp(0)
                     $(this).removeClass('on')
                 }
             })
         }
-        return false;
     })
 
     // pc화면에서 1단계 메뉴 호버 시 2단계 메뉴 보이도록 하기
@@ -148,6 +151,8 @@
         $(this).prev().stop().slideUp(300)
         $(this).hide()
         $(this).prevAll('.openNav').css({display:'block'})
+        $(this).prevAll('.nav').find('.depth1 > li').removeClass('on')
+        $(this).prevAll('.nav').find('.depth1 > li > .depth2').css({display:'none'})
     })
 
 

@@ -23,7 +23,7 @@ body{position:relative}
 .h1_nav .nav .depth1 > li{width:19%; height:90px; line-height:90px; text-align:center; position:relative; display:inline-block;}
 .h1_nav .nav .depth1 > li > a{display:inline-block; text-align:center; font-weight:bold; }
 .h1_nav .nav .depth1 > li.on{color:#DE4555;}
-.h1_nav .nav .depth2{position:absolute; top:100%; left:0; width:100%; display:none; transition:all 0.5s; border-bottom:3px solid #DE4555; z-index:9999;}
+.h1_nav .nav .depth2{position:absolute; top:100%; left:0; width:100%; display:none; border-bottom:3px solid #DE4555; z-index:9999;}
 /* .h1_nav .nav .depth1 > li:hover .depth2{display:block;} */
 .h1_nav .nav .depth2:before{content:""; position:absolute; bottom:100%;}
 .h1_nav .nav .depth2 > li{line-height:40px;}

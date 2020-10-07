@@ -44,4 +44,34 @@
         display:none; color:#fff; font-size:30px; position:absolute; right:30px; top:30px;
     }
 
+    /* 상세페이지 slide 사이즈 */
+    .slide_outer{height:200px; position:relative;}
+    .slide_inner .slide{
+        height:200px; background-size:cover; background-position:center; background-repeat:no-repeat; position:relative;
+    }
+    .slide_inner .slide .text h3{
+        font-size:20px; padding:0 0 10px; border-bottom:3px solid #fff;
+    }
+    .slide_inner .slide .text p{
+        font-size:20px; padding:10px 0 0px;
+    }
+    
+    
+    /* login page */
+    .login_confirm{text-align:center; border-top:3px double white;; border-bottom:1px dotted white; background:#1f1f1f; display:none;}
+    .login_page .loginbox h2{font-size:30px; color:#fff; display:block; padding:0px auto;  margin-top:50px; display:none;}
+    .login_page .loginbox > p{font-size:12px; color:rgba(255,255,255,0.8); display:block; display:none;}
+    .login_page .login_form p{padding:30px 0px; display:inline-block; color:white; text-align:left;}
+    .w630{width:80%;}
+
+
+    /* join page */
+    .join2_form .pilsoo_item:before {content:"※"; position:absolute; left:5%; top:-2px; width:15px; font-weight:bold; font-size:17px; color:#f00;}
+    .join2_form .tit_lbl{display:inline-block; width:20%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:25px;}
+    .join2_form .info_content{display:block; width:100%;}
+    .join2_form .w100p{width:100%;}
+    .join2_form .w30p{width:40%;}
+    .join2_form #addr1 ~ span{display:none;}
+    
+
 }
