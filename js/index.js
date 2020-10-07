@@ -1,5 +1,7 @@
 (function($){
 
+    // content 구역 url load
+
     $(window).load(function(){
         $('.loadAni').delay(100).fadeOut(100)
     })
@@ -124,13 +126,13 @@
     $('.depth1 > li').hover(
         function(){
             if($('html').hasClass('pc')){
-                $(this).find('.depth2').stop().slideDown(300)
+                $(this).find('.depth2').stop().slideDown(0)
                 $(this).addClass('on')
             }
         },
         function(){
             if($('html').hasClass('pc')){
-                $(this).find('.depth2').stop().slideUp(300)
+                $(this).find('.depth2').stop().slideUp(0)
                 $(this).removeClass('on')
             }
         }
