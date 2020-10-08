@@ -43,7 +43,7 @@
     })
 
     
-// main - introduce 아티클 애니메이션 효과
+// main - introduce 아티클 애니메이션 효과 안되ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅁ
 $(window).scroll(function(){
     var sct = $(this).scrollTop()
     var intNear = $('.introduce').offset().top - $(this).height()/2
@@ -72,6 +72,38 @@ $(window).scroll(function(){
 })
 
     // join page
+    // $('form').submit(function(){
+    //     var namelbl = $('#name_lbl').val()
+    //     if(namelbl.length>=3 && namelbl.length<=10){
+    //         for( var i=0; i<namelbl.length; i++){
+    //             var ch = namelbl.charAt(i)
+    //             if(!(ch>='0' && ch<='9') && !(ch>='a'&&ch<='z') && !(ch>='A'&&ch<='Z'))
+    //             {alert('아이디는 영어 대소문자, 숫자만 사용 가능합니다.')
+    //             $('#name_lbl').css({
+    //                 border:'1px solid #f00'
+    //             })
+    //             $('#name_lbl').focus()
+    //             $('#name_lbl').select()
+    //             return false
+    //             }
+    //         }
+    //     } else {
+    //         alert('아이디는 3~10글자의 범위입니다.')
+    //         $('#name_lbl').css({
+    //             border:'1px solid #f00'
+    //         })
+    //         $('#name_lbl').focus()
+    //         $('#name_lbl').select()
+    //         return false
+    //     }
+
+
+    // })
+
+    // $('.info_content > input').on(click, function(){
+    //     $(this).attr({placeholder:''})
+    // })
+
     var flagJoin = true
     initJoin()
     function initJoin(){
@@ -112,11 +144,16 @@ $(window).scroll(function(){
 
 
     // greeting.html
-    $('.greeting_header .greeting .greet_nav > a').on('click', function(){
-        $(this).addClass('.active')
-        $(this).siblings().removeClass('.active')
+    $('#container .greeting_header .greeting .greet_nav > a').on('click', function(){
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
     })
 
+    // product01.html
+    $('#container .product_header .product .product_nav > a').on('click', function(){
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+    })
 
 
 })(jQuery)

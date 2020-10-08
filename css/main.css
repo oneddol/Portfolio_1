@@ -131,20 +131,20 @@ body{background:black}
 
 /* article5 - cs_notice */
 .cs_notice{padding:60px 0;}
-.cs_notice > div{float:left; width:31.33%;}
+.cs_notice .notice, .cs_notice .call_center, .cs_notice .youtube{float:left; width:33.33%;}
 .cs_notice .notice{position:relative;}
-.cs_notice .notice > h3{font-size:22px; color:white; margin:0 0 10px; padding: 0 5px 10px 0; display:inline-block;}
+.cs_notice .notice > h3{font-size:22px; color:white;  padding: 0 5px 20px 10px; display:inline-block;}
 .cs_notice .notice > p{font-size:14px; color:#a80632; font-weight:bold; display:inline-block;}
 .cs_notice .notice .button{border:1px solid #707070; position:absolute; top:0; right:15px; padding:1px 5px; background:#707070; color:#fff; font-size:12px;}
 .cs_notice .notice .button:hover{background:#000; color:#fff;}
 .cs_notice .notice ul{list-style:square; padding-left:20px; color:white; font-size:1px;}
 .cs_notice .notice ul li > a{font-size:14px; padding-left:-1em; display:inline-block; padding:5px 0;}
-.cs_notice .notice ul li:hover a{color:#000;}
-.cs_notice .youtube iframe{width: 100%;}
-.cs_notice .call_center{padding-left:25px; line-height:2em;}
-.cs_notice .call_center h4{font-size:25px; color:white;}
+.cs_notice .notice ul li:hover a{color:#a80632;}
+.cs_notice .call_center{padding-left:25px; line-height:1.8em;}
+.cs_notice .call_center > h3{font-size:22px; color:white;}
 .cs_notice .call_center p{font-size:14px; color:white;}
-.cs_notice .call_center > div{font-size:25.2px; color:#a80632; padding:10px 0; display:block;}
+.cs_notice .call_center > div{font-size:20px; color:#a80632; padding:10px 0; display:block;}
+.cs_notice .youtube iframe{width: 100%;}
 
 
 /* article6 - portfolio */
@@ -307,7 +307,20 @@ body{background:black}
 
 #greeting_section .greet_box {height:450px; position:relative;}
 #greeting_section .greet_box .greet_img{width:38%; overflow:hidden; background-size:cover; background-repeat:no-repeat; background-position:center; float:left; padding:0 1%;}
-#greeting_section .greet_box .greet_img > img{max-width:100%}
+#greeting_section .greet_box .greet_img > img{max-width:100%; animation:fadeInLeft 3s both;}
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
 
 #greeting_section .greet_box .greet_txt{font-size:14px; color:#777; width:59%; float:right; padding:0 1%;}
 .red{color:#a94442}
@@ -316,7 +329,7 @@ body{background:black}
 
 #greeting_section .greet_box .greet_sig{position:absolute; bottom:10%; right:5%;
     font-family:"나눔손글씨 펜"; font-size:40px;}
-
+    
 
 
 /* business style */
@@ -340,11 +353,25 @@ body{background:black}
 #business_section .business_intro span{font-size:20px; color:#333;}
 #business_section .business_intro2{margin:15px 0;}
 #business_section .business_intro2 > p{color:#777; font-size:14px;}
+#business_section .imgbox img{animation:fadeInLeft 3s both}
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
 
 #business_section .biz_content{border:1px solid #ddd; border-radius:5px; margin:20px 0; box-shadow:3px 3px 3px #f5f5f5;}
 #business_section .biz_content h3{font-size:24px; color:#333; background:#f5f5f5; padding:10px 15px;
     border-bottom:1px solid #ddd;}
-#business_section .biz_content > p{font-size:14px; color:#777; padding:27px 15px 27px 15px;}
+#business_section .biz_content > p{font-size:20px; color:#777; padding:27px 15px 27px 15px;}
 #business_section .biz_content ul li{border-top:1px solid #ddd; padding:10px 15px;}
 #business_section .biz_content ul li > h4{font-size:21px; color:#a94442;}
 #business_section .biz_content ul li > p{font-size:17.85px; color:#333;}
@@ -392,8 +419,7 @@ body{background:black}
 .contact_header .contact{text-align:center; color:white;}
 .contact_header .contact  > h2{display:inline-block; padding:20px 0; font-size:32px;}
 .contact_header .contact  > p{display:inline-block; font-size:12px;}
-.contact_header .contact .contact_nav{padding:10px 0 30px;}
-.contact_header .contact .contact_nav > a{display:inline-block; width:8%; height:30px; background:#e8e8e8; color:black; line-height:30px; font-weight:bold; border-radius:5px;}
+.contact_header .contact .contact_nav > a{display:inline-block; width:10%; height:30px; background:#e8e8e8; color:black; line-height:30px; font-weight:bold;}
 .contact_header .contact .contact_nav .active{background:red; color:white;}
 .contact_header .contact .contact_nav > a:hover{opacity:0.8}
 
@@ -416,9 +442,7 @@ body{background:black}
 
 
 /* notice style */
-
-.noticePage{padding:136px 0;}
-.noticePage h2{text-align:center; font-size:25px; margin:50px 0 20px; color:white;}
+.noticePage h2{text-align:center; font-size:25px; margin:50px 0 50px; color:white;}
 .sbox{text-align:center; margin-bottom:20px; text-align:right}
 .sbox select{height:30px; vertical-align:middle;}
 .sbox input[type=text]{height:30px; width:300px; text-indent:1em; vertical-align:middle;}
@@ -442,6 +466,6 @@ body{background:black}
 .noticeTable tbody td:nth-child(5){text-align:center}
 .noticePage .numlist{text-align:center; margin:20px 0; font-size:16px}
 .noticePage .numlist span{background:#ddd; padding:5px 8px; display:inline-block;}
-.noticePage .numlist a{padding:5px; display:inline-block; border:1px solid #ddd; color:white}
+.noticePage .numlist a{padding:5px; display:inline-block; color:white}
 .noticePage .numlist a:hover{background:#ddd;}
 .noticePage .numlist a.on{background:#ddd; color:black}

@@ -6,14 +6,12 @@
         $('.loadAni').delay(100).fadeOut(100)
     })
     $('#content').load('main.html')
-
     $('.login_menu > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
         $('#container').remove()
         $('#content').load(url)
     })
-
     $('.h1_nav .nav .depth1 > li > a').on('click', function(e){
         e.preventDefault()
         if($('html').hasClass('pc')){
@@ -21,16 +19,13 @@
             $('#container').remove()
             $('#content').load(url)
         }
-        
     })
-
     $('.h1_nav .nav .depth1 > li > .depth2 > li > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
         $('#container').remove()
         $('#content').load(url)
     })
-
     $('#footer .company_menu .depth1 > li > ul > li > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
@@ -38,8 +33,7 @@
         $('#content').load(url)
     })
 
-    //header scroll bar
-    
+    //header에 scroll bar위치 따라 bar 그리기
     $(window).on('scroll', function(){
         var scrollSize = $(document).height()-$('#header').height()-$(window).height();
         var sct = $(this).scrollTop();
@@ -51,6 +45,7 @@
         })
     })
 
+    //scroll 위치 따라 header 변경
     $(window).on('scroll',function(){
         var sct = $(this).scrollTop();
         if(sct>=$('#header').height()){
@@ -72,42 +67,37 @@
     }
 })
 
-    // nav depth2 슬라이드다운
-    // $('.h1_nav .depth1 > li').on('mouseover', function(){
-    //     $('.h1_nav .depth1 > li > .depth2').slideDown(300)
-    // })
-
     // 반응형 사이즈 조정시 네이브박스 오픈여부
-    res()
-    res2()
+    var deviceSize = 767;
+    function scrollOX(status){
+        $('html').css({
+            overflowY:status
+        })
+        var htmlWidth = $('html').width()
+        return htmlWidth
+    }
 
-    var flag=true;
+    var swh = scrollOX('hidden'), sws = scrollOX('scroll'), swd = swh - sws
+    if (swd>0){deviceSize = deviceSize - swd}
+
+    res()
+
     function res(){
         var ww = $(window).width()
-        if(ww>767 && flag){
+        if(ww>deviceSize && !$('html').hasClass('pc')){
+            $('html').addClass('pc').removeClass('mobile')
             $('.h1_nav .nav').show()
             $('.depth1 > li').removeClass('on')
             $('.openNav, .closeNav, .depth2').hide()
-            flag = false
-        } else if (ww<=767 && !flag){
+        } else if (ww<=deviceSize && !$('html').hasClass('mobile')){
+            $('html').addClass('mobile').removeClass('pc')
             $('.openNav').show()
             $('.h1_nav .nav').hide()
-            flag=true
-        }
-    }
-
-    function res2(){
-        var ww = $(window).width()
-        if(ww>767){
-            $('html').addClass('pc').removeClass('mobile')
-        } else if(ww<=767){
-            $('html').addClass('mobile').removeClass('pc')
         }
     }
 
     $(window).on('resize', function(){
         res()
-        res2()
     })
 
   // mobile화면에서 클릭 시 2단계 메뉴 보이도록 하기
