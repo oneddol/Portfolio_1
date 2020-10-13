@@ -100,7 +100,7 @@ $(window).scroll(function(){
 
     // })
 
-    // $('.info_content > input').on(click, function(){
+    // $('#name_lbl').on('click', function(){
     //     $(this).attr({placeholder:''})
     // })
 
@@ -121,26 +121,25 @@ $(window).scroll(function(){
             flagJoin=true
         }
     }
-
     $(window).resize(function(){
         initJoin()
     })
 
         // 이메일 선택 옵션따라 내용 채우기   왜안될까ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
-    $('#email_choice').on('change', function(){
-        $('#email_choice option:selected').each(function(){
-            if($(this).val()==='nochoice'){
-                $('#domain').val('')
-                $('#domain').attr('disabled', true)
-            } else if ($(this).val()==='self'){
-                $('#domain').val('')
-                $('#domain').attr('disabled', false)
-            } else {
-                $('#domain').val($(this).val())
-                $('#domain').attr('disabled', true)
-            }
-        })
-    })
+    // $('#emailChoice').on('change', function(){
+    //     $('#emailChoice option:selected').each(function(){
+    //         if($(this).val()==='nochoice'){
+    //             $('#domain').val('')
+    //             $('#domain').attr('disabled', true)
+    //         } else if ($(this).val()==='self'){
+    //             $('#domain').val('')
+    //             $('#domain').attr('disabled', false)
+    //         } else {
+    //             $('#domain').val($(this).val())
+    //             $('#domain').attr('disabled', true)
+    //         }
+    //     })
+    // })
 
 
     // greeting.html
@@ -149,11 +148,15 @@ $(window).scroll(function(){
         $(this).siblings().removeClass('active')
     })
 
+
     // product01.html
     $('#container .product_header .product .product_nav > a').on('click', function(){
         $(this).addClass('active')
         $(this).siblings().removeClass('active')
     })
 
+
+    // contact.html
+    
 
 })(jQuery)

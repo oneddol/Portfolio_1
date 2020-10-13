@@ -131,14 +131,15 @@ body{background:black}
 
 /* article5 - cs_notice */
 .cs_notice{padding:60px 0;}
-.cs_notice .notice, .cs_notice .call_center, .cs_notice .youtube{float:left; width:33.33%;}
+.cs_notice .notice, .cs_notice .call_center, .cs_notice .youtube{float:left; width:33.33%;
+    padding:25px 0; height:100%; border:1px solid white;}
 .cs_notice .notice{position:relative;}
 .cs_notice .notice > h3{font-size:22px; color:white;  padding: 0 5px 20px 10px; display:inline-block;}
 .cs_notice .notice > p{font-size:14px; color:#a80632; font-weight:bold; display:inline-block;}
 .cs_notice .notice .button{border:1px solid #707070; position:absolute; top:0; right:15px; padding:1px 5px; background:#707070; color:#fff; font-size:12px;}
 .cs_notice .notice .button:hover{background:#000; color:#fff;}
 .cs_notice .notice ul{list-style:square; padding-left:20px; color:white; font-size:1px;}
-.cs_notice .notice ul li > a{font-size:14px; padding-left:-1em; display:inline-block; padding:5px 0;}
+.cs_notice .notice ul li > a{font-size:14px; padding-left:-1em; display:inline-block; padding:5px 0; }
 .cs_notice .notice ul li:hover a{color:#a80632;}
 .cs_notice .call_center{padding-left:25px; line-height:1.8em;}
 .cs_notice .call_center > h3{font-size:22px; color:white;}
@@ -152,11 +153,21 @@ body{background:black}
 .portfolio h2{text-align:center; font-size:38px; color:#fff;}
 .portfolio > p{text-align:center;}
 .portfolio .under_bar{width:50px; height:3px;  margin:15px auto 45px; background:#1f1f1f}
-.portfolio ul li{float:left; width:25%; padding:5px 5px; }
-.portfolio ul li a{display:block; text-align:center;}
-.portfolio ul li img{width:100%; transition:all 0.5s;}
-.portfolio ul li p{color:#434343; font-size:14px; padding:5px 0; margin:5px 0; transition:all 0.5s;}
+.portfolio ul li{float:left; padding:5px 5px; overflow:hidden;}
+.portfolio ul li:nth-child(1){width:25%;}
+.portfolio ul li:nth-child(2){width:25%;}
+.portfolio ul li:nth-child(3){width:25%;}
+.portfolio ul li:nth-child(4){width:25%;}
+.portfolio ul li:nth-child(5){width:25%;}
+.portfolio ul li:nth-child(6){width:25%;}
+.portfolio ul li:nth-child(7){width:25%;}
+.portfolio ul li:nth-child(8){width:25%;}
+
+.portfolio > ul > li > a{text-align:center;}
 .portfolio .overlay{background:rgba(0,0,0,1); z-index:9999;}
+.portfolio > ul > li > a > div > img{width:100%; transition:all 0.5s;}
+.portfolio > ul > li > a > p{color:#434343; font-size:14px; padding:5px 0; margin:5px 0; transition:all 0.5s;}
+
 .portfolio ul li:hover p{background:#c7162d; color:white;}
 .portfolio ul li:hover img{opacity:0.7}
 
@@ -432,6 +443,10 @@ body{background:black}
 #contact_section  textarea{width:100%; height:200px; padding:15px 1em; border:none; resize:none;}
 
 #contact_section  .txt_area > textarea{padding: 20px; height:200px;}
+
+#contact_section .agree{padding:20px 0 5px 15px; font-size:20px; font-weight:bold; border:none;}
+#contact_section .checkbox{width:15px; height:15px; margin-left:5px;}
+#contact_section .agreement{display:inline-block;}
 
 #contact_section .btn{text-align:center; padding:30px 0;}
 #contact_section .btn input{width:100px; height:50px; font-weight:bold; border-radius:5px;}
