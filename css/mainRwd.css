@@ -1,12 +1,7 @@
 @charset "utf-8";
 
 @media only screen and (max-width:1230px){
-    .h1_nav .nav{
-        position:absolute; top:50%; right:0%; color:rgba(255,255,255,0.78); width:710px; z-index:9999; transform:translateY(-50%);
-    }
-    .footer .footer_menu > ul > li{float:left; width:14.28%; text-align:center;}
-    .footer .footer_menu > ul > li > a:before{content:""; padding-right:15px; position:relative; top:-1.5px;}
-    .footer .footer_contents > div{float:left; width:33.33%;}
+
 }
 
 @media only screen and (max-width:1024px){    
@@ -55,7 +50,8 @@
         color:#1f1f1f; font-size:14px; transition:all 0.5s;
         position:absolute; top:0; left:0; right:0; bottom:0; line-height:150px;
     }
-    .portfolio ul li:hover p{opacity:none;}
+    .portfolio ul li:hover p{background:none; color:white;}
+    .portfolio ul li:hover img{opacity:0.8}
     
     /* notice page */
     .noticeTable col:nth-child(1){width:8%;}
@@ -122,9 +118,10 @@
 
 
     /* join page */
+    .join2_form .info_pilsoo{padding-left:55px; padding-bottom:10px; border-bottom:1px solid #000; font-size:15px; color:#f00;}
     .join2_form .pilsoo_item:before {content:"※"; position:absolute; left:5%; top:-2px; width:15px; font-weight:bold; font-size:17px; color:#f00;}
     .join2_form .tit_lbl{display:inline-block; width:20%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:25px;}
-    .join2_form .info_content{display:block; width:100%;}
+    .join2_form .info_content{display:block; width:95%; margin:0 auto;}
     .join2_form .w100p{width:100%;}
     .join2_form .w30p{width:40%;}
     .join2_form #addr1 ~ span{display:none;}

@@ -19,9 +19,7 @@
         nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
         responsive:[{
             breakpoint:1025,
-            settings:{
-                arrows:false
-            }
+            settings:{ arrows:false }
         }]
     })
 
@@ -44,39 +42,40 @@
 
     
 // main - introduce 아티클 애니메이션 효과 안되ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅁ
-$(window).scroll(function(){
-    var sct = $(this).scrollTop()
-    var intNear = $('.introduce').offset().top - $(this).height()/2
-    if(sct>=intNear){
-        for(var i=0; i<$('.introduce .info_box .column').length; i++){
-            $('.introduce .info_box .column').eq(i).css({
-                animationDelay:i*0.5+'s'
-            }).addClass('animate__fadeInUp')
-        }
-    }   else    {
-        $('.info_box .column').removeClass('animate__fadeInUp')
-    }
+// $(window).scroll(function(){
+//     var sct = $(this).scrollTop()
+//     var intNear = $('.introduce').offset().top - $(this).height()/2
+//     if(sct>=intNear){
+//         for(var i=0; i<$('.introduce .info_box .column').length; i++){
+//             $('.introduce .info_box .column').eq(i).css({
+//                 animationDelay:i*0.5+'s'
+//             }).addClass('animate__fadeInUp')
+//         }
+//     }   else    {
+//         $('.info_box .column').removeClass('animate__fadeInUp')
+//     }
 
-    var curriNear = $('.curriInfo').offset().top - $(this).height()/2
-    if(sct>=curriNear){
-        $('.curriBox .column').eq(0).addClass('animate__fadeInLeft')
-        $('.curriBox .column').eq(1).addClass('animate__fadeInRight')
-        $('.curriBox .column').eq(2).addClass('animate__fadeInLeft')
-        $('.curriBox .column').eq(3).addClass('animate__fadeInRight')
-    }   else    {
-        $('.curriBox .column').eq(0).removeClass('animate__fadeInLeft')
-        $('.curriBox .column').eq(1).removeClass('animate__fadeInRight')
-        $('.curriBox .column').eq(2).removeClass('animate__fadeInLeft')
-        $('.curriBox .column').eq(3).removeClass('animate__fadeInRight')
-    }
-})
+//     var curriNear = $('.curriInfo').offset().top - $(this).height()/2
+//     if(sct>=curriNear){
+//         $('.curriBox .column').eq(0).addClass('animate__fadeInLeft')
+//         $('.curriBox .column').eq(1).addClass('animate__fadeInRight')
+//         $('.curriBox .column').eq(2).addClass('animate__fadeInLeft')
+//         $('.curriBox .column').eq(3).addClass('animate__fadeInRight')
+//     }   else    {
+//         $('.curriBox .column').eq(0).removeClass('animate__fadeInLeft')
+//         $('.curriBox .column').eq(1).removeClass('animate__fadeInRight')
+//         $('.curriBox .column').eq(2).removeClass('animate__fadeInLeft')
+//         $('.curriBox .column').eq(3).removeClass('animate__fadeInRight')
+//     }
+// })
 
     // join page
-    // $('form').submit(function(){
+    // $('#join2_page .join2_box .join2_form').submit(function(e){
+    //     e.preventDefault()
     //     var namelbl = $('#name_lbl').val()
     //     if(namelbl.length>=3 && namelbl.length<=10){
     //         for( var i=0; i<namelbl.length; i++){
-    //             var ch = namelbl.charAt(i)
+    //             var ch = namelbl.charAt(i);
     //             if(!(ch>='0' && ch<='9') && !(ch>='a'&&ch<='z') && !(ch>='A'&&ch<='Z'))
     //             {alert('아이디는 영어 대소문자, 숫자만 사용 가능합니다.')
     //             $('#name_lbl').css({
@@ -96,13 +95,11 @@ $(window).scroll(function(){
     //         $('#name_lbl').select()
     //         return false
     //     }
+    //     return false
 
 
     // })
 
-    // $('#name_lbl').on('click', function(){
-    //     $(this).attr({placeholder:''})
-    // })
 
     var flagJoin = true
     initJoin()
@@ -126,20 +123,20 @@ $(window).scroll(function(){
     })
 
         // 이메일 선택 옵션따라 내용 채우기   왜안될까ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
-    // $('#emailChoice').on('change', function(){
-    //     $('#emailChoice option:selected').each(function(){
-    //         if($(this).val()==='nochoice'){
-    //             $('#domain').val('')
-    //             $('#domain').attr('disabled', true)
-    //         } else if ($(this).val()==='self'){
-    //             $('#domain').val('')
-    //             $('#domain').attr('disabled', false)
-    //         } else {
-    //             $('#domain').val($(this).val())
-    //             $('#domain').attr('disabled', true)
-    //         }
-    //     })
-    // })
+        // $('#emailChoice').on('change', function(){
+        //     $('#emailChoice option:selected').each(function(){
+        //         if($(this).val()==='nochoice'){
+        //             $('#domain').val('')
+        //             $('#domain').attr('disabled', true)
+        //         } else if ($(this).val()==='self'){
+        //             $('#domain').val('')
+        //             $('#domain').attr('disabled', false)
+        //         } else {
+        //             $('#domain').val($(this).val())
+        //             $('#domain').attr('disabled', true)
+        //         }
+        //     })
+        // })
 
 
     // greeting.html

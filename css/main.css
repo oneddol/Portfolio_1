@@ -132,7 +132,7 @@ body{background:black}
 /* article5 - cs_notice */
 .cs_notice{padding:60px 0;}
 .cs_notice .notice, .cs_notice .call_center, .cs_notice .youtube{float:left; width:33.33%;
-    padding:25px 0; height:100%; border:1px solid white;}
+    padding:25px 0; height:100%;}
 .cs_notice .notice{position:relative;}
 .cs_notice .notice > h3{font-size:22px; color:white;  padding: 0 5px 20px 10px; display:inline-block;}
 .cs_notice .notice > p{font-size:14px; color:#a80632; font-weight:bold; display:inline-block;}
